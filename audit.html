@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulled Inc. - Google Ads Performance Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #162642 0%, #1a2d4f 100%);
+            color: white;
+            line-height: 1.5;
+        }
+        
+        .slide {
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            page-break-after: always;
+        }
+        
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .slide-number {
+            background: #cc5b27;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .main-title {
+            font-size: 3.2em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #cc5b27, #ff7c4c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #cc5b27;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #cc5b27;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #cc5b27;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #cc5b27, #ff7c4c);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .highlight-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .performance-table {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .performance-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .performance-table th {
+            background: #cc5b27;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .performance-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+        }
+        
+        .current { background: #4CAF50; color: white; font-weight: bold; text-align: center; }
+        .month1 { background: #2196F3; color: white; font-weight: bold; text-align: center; }
+        .month3 { background: #E91E63; color: white; font-weight: bold; text-align: center; }
+        
+        .bullet-points {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .bullet-points li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .bullet-points li:before {
+            content: "▶";
+            color: #cc5b27;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .warning { color: #FF5722; font-weight: bold; }
+        .success { color: #4CAF50; font-weight: bold; }
+        .moderate { color: #FFC107; font-weight: bold; }
+        
+        .confidence-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .risk-mitigation {
+            background: rgba(33, 150, 243, 0.2);
+            border: 2px solid #2196F3;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        @media print {
+            .slide { page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title & Overview -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">01</div>
+        </div>
+        <div class="main-title">Pulled Inc. Google Ads</div>
+        <div class="subtitle">Performance Analysis & Growth Opportunity Assessment</div>
+        
+        <div class="highlight-box">
+            <h3>Strong Foundation Ready for Strategic Scaling</h3>
+            <p>Current Performance: 4.19% CTR (Above Industry Average) | Clear Growth Path Identified</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">$458.52</span>
+                <div class="stat-label">Current Monthly Spend</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">4.19%</span>
+                <div class="stat-label">Click-Through Rate</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">26.86%</span>
+                <div class="stat-label">Impression Share</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">$0.56</span>
+                <div class="stat-label">Projected Blended CPC</div>
+            </div>
+        </div>
+        
+        <div class="confidence-box">
+            <h3 style="color: #4CAF50; margin-bottom: 15px;">✓ Ready to Scale Confidently</h3>
+            <p>Strong engagement metrics prove market demand exists. Strategic optimizations will unlock significant growth potential.</p>
+        </div>
+    </div>
+
+    <!-- Slide 2: Current State Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">02</div>
+        </div>
+        <div class="section-title">Current Performance Baseline</div>
+        
+        <div class="two-column">
+            <div>
+                <h4 style="color: #4CAF50; margin-bottom: 15px;">✓ Strong Performing Areas</h4>
+                <ul class="bullet-points">
+                    <li><strong>CTR: 4.19%</strong> - Well above 3.17% industry average</li>
+                    <li><strong>Audience Engagement</strong> - Market clearly wants your services</li>
+                    <li><strong>Budget Efficiency</strong> - Controlled spend with measurable traffic</li>
+                    <li><strong>Technical Setup</strong> - Account structure fundamentally sound</li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: #FFC107; margin-bottom: 15px;">⚠ Immediate Opportunities</h4>
+                <ul class="bullet-points">
+                    <li><strong>Conversion Tracking</strong> - Currently not measuring leads properly</li>
+                    <li><strong>Impression Share</strong> - Only capturing 26.86% of available searches</li>
+                    <li><strong>Campaign Diversity</strong> - Multiple paused campaigns to reactivate</li>
+                    <li><strong>Keyword Control</strong> - Exact match strategy needs implementation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="performance-table">
+            <table>
+                <tr>
+                    <th>Key Metrics</th>
+                    <th>Current Status</th>
+                    <th>Industry Benchmark</th>
+                    <th>Assessment</th>
+                </tr>
+                <tr>
+                    <td><strong>Click-Through Rate</strong></td>
+                    <td class="success">4.19%</td>
+                    <td>3.17%</td>
+                    <td class="success">+32% Above Average</td>
+                </tr>
+                <tr>
+                    <td><strong>Monthly Spend</strong></td>
+                    <td class="current">$458.52</td>
+                    <td>Variable</td>
+                    <td class="moderate">Controlled Budget</td>
+                </tr>
+                <tr>
+                    <td><strong>Impression Share</strong></td>
+                    <td class="warning">26.86%</td>
+                    <td>50%+</td>
+                    <td class="warning">Major Growth Opportunity</td>
+                </tr>
+                <tr>
+                    <td><strong>Conversion Tracking</strong></td>
+                    <td class="warning">Broken</td>
+                    <td>100%</td>
+                    <td class="warning">Fix Required</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="confidence-box">
+            <h3 style="color: #4CAF50; margin-bottom: 15px;">Assessment: Strong Foundation</h3>
+            <p>Your account shows excellent user engagement (4.19% CTR) proving market demand. The primary focus will be fixing tracking and scaling successful elements.</p>
+        </div>
+    </div>
+
+    <!-- Slide 3: Growth Projections -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">03</div>
+        </div>
+        <div class="section-title">Conservative Growth Projections</div>
+        
+        <div class="performance-table">
+            <table>
+                <tr>
+                    <th>Performance Metric</th>
+                    <th class="current">Current Baseline</th>
+                    <th class="month1">Month 1 Target</th>
+                    <th class="month3">Month 3 Target</th>
+                    <th>Growth %</th>
+                </tr>
+                <tr>
+                    <td><strong>Monthly Spend</strong></td>
+                    <td>$458.52</td>
+                    <td>$2,360</td>
+                    <td>$3,766</td>
+                    <td class="success">+720%</td>
+                </tr>
+                <tr>
+                    <td><strong>Click-Through Rate</strong></td>
+                    <td>4.19%</td>
+                    <td>5.00%</td>
+                    <td>6.65%</td>
+                    <td class="success">+59%</td>
+                </tr>
+                <tr>
+                    <td><strong>Conversion Rate</strong></td>
+                    <td>N/A*</td>
+                    <td>5.00%</td>
+                    <td>7.50%</td>
+                    <td class="success">Establish & Grow</td>
+                </tr>
+                <tr>
+                    <td><strong>Leads Generated</strong></td>
+                    <td>0*</td>
+                    <td>211</td>
+                    <td>421</td>
+                    <td class="success">High Volume</td>
+                </tr>
+                <tr>
+                    <td><strong>Cost Per Lead</strong></td>
+                    <td>N/A*</td>
+                    <td>$11.18</td>
+                    <td>$8.95</td>
+                    <td class="success">Improving Efficiency</td>
+                </tr>
+                <tr>
+                    <td><strong>Estimated Revenue</strong></td>
+                    <td>$0*</td>
+                    <td>$105,000</td>
+                    <td>$210,000</td>
+                    <td class="success">Significant ROI</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">$105K</span>
+                <div class="stat-label">Month 1 Revenue Target</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">$210K</span>
+                <div class="stat-label">Month 3 Revenue Target</div>
+            </div>
+            <div class="stat-card" style="border-color: #FF9800;">
+                <span class="stat-number" style="color: #FF9800;">421</span>
+                <div class="stat-label">Monthly Leads @ Month 3</div>
+            </div>
+            <div class="stat-card" style="border-color: #E91E63;">
+                <span class="stat-number" style="color: #E91E63;">44x</span>
+                <div class="stat-label">Projected ROI</div>
+            </div>
+        </div>
+
+        <div class="confidence-box">
+            <p style="font-size: 14px; margin-bottom: 0;"><strong>*</strong> Current conversion tracking broken - immediate fix will establish baseline metrics</p>
+        </div>
+    </div>
+
+    <!-- Slide 4: 30-Day Action Plan -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">04</div>
+        </div>
+        <div class="section-title">30-Day Implementation Roadmap</div>
+        
+        <div class="performance-table">
+            <table>
+                <tr>
+                    <th>Week</th>
+                    <th>Priority Actions</th>
+                    <th>Expected Impact</th>
+                    <th>Success Metrics</th>
+                </tr>
+                <tr>
+                    <td class="warning"><strong>Week 1</strong></td>
+                    <td>
+                        • Fix conversion tracking immediately<br>
+                        • Resolve ad disapprovals<br>
+                        • Reactivate paused campaigns
+                    </td>
+                    <td class="success">Data visibility restored</td>
+                    <td>Conversion tracking = 100%</td>
+                </tr>
+                <tr>
+                    <td class="moderate"><strong>Week 2</strong></td>
+                    <td>
+                        • Implement negative keywords<br>
+                        • Add high-intent exact match keywords<br>
+                        • Launch competitor analysis campaigns
+                    </td>
+                    <td class="success">Traffic quality improved</td>
+                    <td>Impression share > 35%</td>
+                </tr>
+                <tr>
+                    <td class="success"><strong>Week 3</strong></td>
+                    <td>
+                        • Scale successful campaigns<br>
+                        • Customer pain point messaging<br>
+                        • Mobile optimization focus
+                    </td>
+                    <td class="success">Volume increase</td>
+                    <td>CTR > 5.0%</td>
+                </tr>
+                <tr>
+                    <td class="success"><strong>Week 4</strong></td>
+                    <td>
+                        • Performance analysis<br>
+                        • Budget optimization<br>
+                        • Prepare Month 2 expansion
+                    </td>
+                    <td class="success">Optimized foundation</td>
+                    <td>CPA < $15.00</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="two-column">
+            <div class="risk-mitigation">
+                <h4 style="color: #2196F3; margin-bottom: 15px;">Risk Mitigation Strategy</h4>
+                <ul class="bullet-points">
+                    <li><strong>Conservative Scaling</strong> - 25% budget increases max</li>
+                    <li><strong>Daily Monitoring</strong> - CPA alerts set at $20</li>
+                    <li><strong>Performance Tracking</strong> - Weekly detailed reports</li>
+                    <li><strong>Quick Adjustments</strong> - Same-day response to issues</li>
+                </ul>
+            </div>
+            <div class="confidence-box">
+                <h4 style="color: #4CAF50; margin-bottom: 15px;">Success Indicators</h4>
+                <ul class="bullet-points">
+                    <li><strong>Week 1:</strong> Tracking restored, campaigns live</li>
+                    <li><strong>Week 2:</strong> Lead flow established</li>
+                    <li><strong>Week 3:</strong> Scale begins showing results</li>
+                    <li><strong>Week 4:</strong> Clear ROI demonstration</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Confidence Summary -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">05</div>
+        </div>
+        <div class="main-title" style="font-size: 2.5em;">Our Assessment</div>
+        <div class="subtitle">Ready to Proceed with Confidence</div>
+        
+        <div class="highlight-box">
+            <h3>Account Shows Strong Fundamentals</h3>
+            <p>4.19% CTR proves your services have strong market demand. The technical issues are straightforward fixes that will unlock significant growth potential.</p>
+        </div>
+        
+        <div class="two-column">
+            <div class="confidence-box">
+                <h4 style="color: #4CAF50; margin-bottom: 15px;">✓ Why We're Confident</h4>
+                <ul class="bullet-points">
+                    <li><strong>Market Validation:</strong> 4.19% CTR vs 3.17% industry average</li>
+                    <li><strong>Clear Issues:</strong> Technical problems with obvious solutions</li>
+                    <li><strong>Scalable Foundation:</strong> Account structure ready for growth</li>
+                    <li><strong>Conservative Projections:</strong> Realistic, achievable targets</li>
+                    <li><strong>Risk Management:</strong> Controlled scaling with safety measures</li>
+                </ul>
+            </div>
+            <div class="confidence-box">
+                <h4 style="color: #4CAF50; margin-bottom: 15px;">✓ What You Can Expect</h4>
+                <ul class="bullet-points">
+                    <li><strong>Week 1:</strong> Immediate conversion tracking fixes</li>
+                    <li><strong>Month 1:</strong> Clear lead generation and ROI visibility</li>
+                    <li><strong>Month 3:</strong> Significant revenue growth demonstration</li>
+                    <li><strong>Ongoing:</strong> Transparent reporting and regular communication</li>
+                    <li><strong>Results:</strong> Conservative 44x ROI by Month 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <div style="font-size: 1.4em; margin-bottom: 20px; color: #4CAF50;">
+                <strong>✓ RECOMMENDATION: PROCEED WITH IMPLEMENTATION</strong>
+            </div>
+            <div style="font-size: 1.1em; opacity: 0.9;">
+                Your account has excellent fundamentals with clear growth opportunities.<br>
+                The issues identified are technical fixes, not strategic problems.<br>
+                <strong>Expected Timeline: Quick wins in Week 1, significant results by Month 3</strong>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
