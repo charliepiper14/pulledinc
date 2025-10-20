@@ -1,4 +1,459 @@
-<!-- Strategic Action Plan -->
+<!-- Mobile CRO Opportunities -->
+        <div class="section">
+            <h2>Mobile UX Optimization Opportunities</h2>
+            <p style="color: #e0e0e0; font-size: 1.2rem; margin-bottom: 30px;">
+                82% of traffic is mobile, representing the largest conversion rate improvement opportunity. PageSpeed Insights reveals critical performance issues blocking conversions.
+            </p>
+
+            <div class="alert-box" style="background: rgba(204, 91, 39, 0.2); border-color: #cc5b27;">
+                <div class="alert-title" style="color: #ff8c52;">Core Web Vitals Assessment: FAILED</div>
+                <div class="alert-text" style="color: #e0e0e0;">
+                    Google PageSpeed Insights shows the site is failing Core Web Vitals - the metrics that directly impact user experience and SEO rankings. This is costing conversions every day.
+                </div>
+            </div>
+
+            <h3>PageSpeed Insights - Mobile Performance Breakdown</h3>
+            <div class="metrics-grid">
+                <div class="metric-card" style="border-color: #dc2626;">
+                    <div style="color: #fca5a5; font-size: 1rem; margin-bottom: 10px;">Performance Score</div>
+                    <div class="metric-number" style="font-size: 3.5rem; color: #fca5a5;">43/100</div>
+                    <div class="metric-label">FAILED (Target: 60+)</div>
+                    <div class="metric-status status-bad">❌ Poor</div>
+                </div>
+                <div class="metric-card">
+                    <div style="color: #86efac; font-size: 1rem; margin-bottom: 10px;">Accessibility</div>
+                    <div class="metric-number" style="color: #86efac;">92/100</div>
+                    <div class="metric-label">Good</div>
+                    <div class="metric-status status-good">✓ Passed</div>
+                </div>
+                <div class="metric-card">
+                    <div style="color: #fcd34d; font-size: 1rem; margin-bottom: 10px;">Best Practices</div>
+                    <div class="metric-number" style="color: #fcd34d;">75/100</div>
+                    <div class="metric-label">Needs Improvement</div>
+                    <div class="metric-status status-warning">⚠️ Warning</div>
+                </div>
+                <div class="metric-card">
+                    <div style="color: #86efac; font-size: 1rem; margin-bottom: 10px;">SEO</div>
+                    <div class="metric-number" style="color: #86efac;">92/100</div>
+                    <div class="metric-label">Good</div>
+                    <div class="metric-status status-good">✓ Passed</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 50px;">Core Web Vitals - Critical Issues</h3>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Current Value</th>
+                            <th>Target</th>
+                            <th>Status</th>
+                            <th>User Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(220, 38, 38, 0.15);">
+                            <td><strong>Largest Contentful Paint (LCP)</strong></td>
+                            <td style="color: #fca5a5; font-weight: bold;">24.2 seconds</td>
+                            <td>&lt;2.5s</td>
+                            <td style="text-align: center;">❌</td>
+                            <td>Users wait 24s for main content to load</td>
+                        </tr>
+                        <tr style="background: rgba(220, 38, 38, 0.1);">
+                            <td><strong>First Contentful Paint (FCP)</strong></td>
+                            <td style="color: #fca5a5; font-weight: bold;">5.6 seconds</td>
+                            <td>&lt;1.8s</td>
+                            <td style="text-align: center;">❌</td>
+                            <td>Blank screen for 5.6 seconds</td>
+                        </tr>
+                        <tr style="background: rgba(204, 91, 39, 0.1);">
+                            <td><strong>Time to First Byte (TTFB)</strong></td>
+                            <td style="color: #fcd34d;">0.8 seconds</td>
+                            <td>&lt;0.8s</td>
+                            <td style="text-align: center;">⚠️</td>
+                            <td>Server response acceptable</td>
+                        </tr>
+                        <tr style="background: rgba(34, 197, 94, 0.1);">
+                            <td><strong>Interaction to Next Paint (INP)</strong></td>
+                            <td style="color: #86efac;">129 ms</td>
+                            <td>&lt;200ms</td>
+                            <td style="text-align: center;">✓</td>
+                            <td>Good - page responds quickly</td>
+                        </tr>
+                        <tr style="background: rgba(34, 197, 94, 0.1);">
+                            <td><strong>Cumulative Layout Shift (CLS)</strong></td>
+                            <td style="color: #86efac;">0</td>
+                            <td>&lt;0.1</td>
+                            <td style="text-align: center;">✓</td>
+                            <td>No unexpected layout shifts</td>
+                        </tr>
+                        <tr style="background: rgba(220, 38, 38, 0.1);">
+                            <td><strong>Total Blocking Time</strong></td>
+                            <td style="color: #fca5a5; font-weight: bold;">570 ms</td>
+                            <td>&lt;200ms</td>
+                            <td style="text-align: center;">❌</td>
+                            <td>Page unresponsive for 570ms</td>
+                        </tr>
+                        <tr style="background: rgba(220, 38, 38, 0.15);">
+                            <td><strong>Speed Index</strong></td>
+                            <td style="color: #fca5a5; font-weight: bold;">9.1 seconds</td>
+                            <td>&lt;3.4s</td>
+                            <td style="text-align: center;">❌</td>
+                            <td>Content appears slowly</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="margin-top: 50px;">PageSpeed Diagnostics - Actionable Fixes</h3>
+            <div class="issue-list">
+                <div class="issue-item">
+                    <strong>Largest Contentful Paint Element: 24,230 ms</strong>
+                    <div style="margin-top: 10px; color: #b0c4de;">
+                        The main hero image is taking 24+ seconds to load on mobile        <!-- Campaign Structure Strategy -->
+        <div class="section">
+            <h2>Campaign Structure Optimization Strategy</h2>
+            <p style="color: #e0e0e0; font-size: 1.2rem; margin-bottom: 30px;">
+                Based on client feedback and product feed analysis: Segment by competition level and profit margin, using actual Shopify product IDs for precise targeting
+            </p>
+
+            <div class="alert-box" style="background: rgba(204, 91, 39, 0.2); border-color: #cc5b27;">
+                <div class="alert-title" style="color: #ff8c52;">Strategic Segmentation Approach</div>
+                <div class="alert-text" style="color: #e0e0e0;">
+                    Client insight: "California Natives, Fruit/Citrus, and Large Shrubs have less competition because we offer larger sizes competitors don't. Privacy screens have highest competition." This dictates our bidding strategy and budget allocation.
+                </div>
+            </div>
+
+            <h3>Product Segmentation Overview (From Feed Analysis)</h3>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Product Count</th>
+                            <th>Avg Price Range</th>
+                            <th>Competition</th>
+                            <th>Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(34, 197, 94, 0.15);">
+                            <td><strong>California Natives</strong></td>
+                            <td>9 product types</td>
+                            <td>$295-$3,850</td>
+                            <td style="color: #86efac;">LOW</td>
+                            <td>Aggressive bidding, high priority</td>
+                        </tr>
+                        <tr style="background: rgba(34, 197, 94, 0.15);">
+                            <td><strong>Fruit/Citrus</strong></td>
+                            <td>13 product types</td>
+                            <td>$650-$2,150</td>
+                            <td style="color: #fcd34d;">LOW-MEDIUM</td>
+                            <td>Unique sizing advantage</td>
+                        </tr>
+                        <tr style="background: rgba(220, 38, 38, 0.1);">
+                            <td><strong>Privacy Screens</strong></td>
+                            <td>7 product types</td>
+                            <td>$295-$1,850</td>
+                            <td style="color: #fca5a5;">HIGH</td>
+                            <td>Conservative bidding, differentiate on size</td>
+                        </tr>
+                        <tr style="background: rgba(204, 91, 39, 0.1);">
+                            <td><strong>High-Value Trees</strong></td>
+                            <td>22 product types</td>
+                            <td>$595-$3,850</td>
+                            <td style="color: #fcd34d;">MEDIUM-HIGH</td>
+                            <td>Selective targeting, proven sellers</td>
+                        </tr>
+                        <tr style="background: rgba(34, 197, 94, 0.15);">
+                            <td><strong>Large Shrubs/Succulents</strong></td>
+                            <td>6 product types</td>
+                            <td>$40-$575</td>
+                            <td style="color: #86efac;">LOW</td>
+                            <td>Volume play, bundle opportunities</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="margin-top: 50px;">Campaign Structure: 3-Tier Approach</h3>
+            
+            <!-- Tier 1: Performance Max -->
+            <div class="phase">
+                <div class="phase-number">1</div>
+                <div class="phase-title">Performance Max Campaign (Optimized)</div>
+                <div style="color: #e0e0e0; margin-bottom: 20px;">
+                    <strong>Budget:</strong> $80-100/day | <strong>Goal:</strong> Broad reach with smart segmentation
+                </div>
+
+                <h4 style="color: #cc5b27; margin: 20px 0 15px 0;">Asset Group 1: Low-Competition Winners</h4>
+                <div style="background: rgba(34, 197, 94, 0.1); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <strong style="color: #86efac;">California Natives + Fruit/Citrus (Low Competition)</strong>
+                    <div style="margin-top: 15px; color: #e0e0e0;">
+                        <strong>Product IDs to Include:</strong><br>
+                        <div style="font-family: monospace; font-size: 0.9rem; margin-top: 10px; line-height: 1.8;">
+                            shopify_us_7300031316141_42066997543085 (Toyon 24" Box - $595)<br>
+                            shopify_us_6244531568813_38070099542189 (Coast Live Oak 36" - $1,650)<br>
+                            shopify_us_6272743571629_38176374259885 (CA Sycamore 24" - $695)<br>
+                            shopify_us_7254479012013_42065334108333 (Meyer Lemon 36" - $2,150)<br>
+                            shopify_us_7300880203949_42069931065517 (Cara Cara Orange 25gal - $1,150)<br>
+                            shopify_us_7254501458093_41887503351981 (Manzanillo Olive 24" - $650)
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: rgba(22, 38, 66, 0.6); border-radius: 8px;">
+                            <strong>Audience Signals:</strong><br>
+                            • Custom Intent: "california native plants," "heritage trees," "drought tolerant trees"<br>
+                            • In-Market: Home improvement, landscaping services<br>
+                            • Customer Match: Upload past purchasers (if available)
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: rgba(22, 38, 66, 0.6); border-radius: 8px;">
+                            <strong>Ad Copy Hooks:</strong><br>
+                            • "California-Adapted Trees That Actually Thrive"<br>
+                            • "Why Contractors Choose Yardwork for Native Stock"<br>
+                            • "Field-Ready Sizes Competitors Don't Offer"
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="color: #cc5b27; margin: 20px 0 15px 0;">Asset Group 2: High-Intent Privacy & Screens</h4>
+                <div style="background: rgba(220, 38, 38, 0.1); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <strong style="color: #fca5a5;">Privacy Screens (High Competition - Conservative Bidding)</strong>
+                    <div style="margin-top: 15px; color: #e0e0e0;">
+                        <strong>Product IDs to Include:</strong><br>
+                        <div style="font-family: monospace; font-size: 0.9rem; margin-top: 10px; line-height: 1.8;">
+                            shopify_us_6244534091949_38070086860973 (Carolina Cherry 36" - $1,650)<br>
+                            shopify_us_7092067565741_41604489969837 (Indian Laurel 10-12' - $895)<br>
+                            shopify_us_6244409606317_38070132834477 (Fern Pine 36" - $1,650)<br>
+                            shopify_us_7300926341293_42459414331565 (English Laurel 36" - $1,850)
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: rgba(22, 38, 66, 0.6); border-radius: 8px;">
+                            <strong>Differentiation Strategy:</strong><br>
+                            • Emphasize MATURE sizing (36" boxes, 10-12' heights) vs. competitors' 5-15 gallon<br>
+                            • "Install Privacy Today, Not in 3 Years"<br>
+                            • "Contractor-Grade Stock: Immediate Impact"
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: rgba(22, 38, 66, 0.6); border-radius: 8px;">
+                            <strong>Audience Signals:</strong><br>
+                            • Custom Intent: "privacy trees," "hedge installation," "backyard privacy"<br>
+                            • Negative Keywords: "how to grow," "small," "starter," "young trees"
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="color: #cc5b27; margin: 20px 0 15px 0;">Asset Group 3: Premium High-Value Trees</h4>
+                <div style="background: rgba(204, 91, 39, 0.1); padding: 20px; border-radius: 10px;">
+                    <strong style="color: #ff8c52;">Proven Sellers (Data-Driven Selection)</strong>
+                    <div style="margin-top: 15px; color: #e0e0e0;">
+                        <strong>Product IDs with Historical Performance:</strong><br>
+                        <div style="font-family: monospace; font-size: 0.9rem; margin-top: 10px; line-height: 1.8;">
+                            shopify_us_7193173098669_41637356175533 (Swan Hill Olive 48" - $1,250 | 3 clicks)<br>
+                            shopify_us_7294513316013_42042288668845 (Akebono Cherry 24" - $1,250 | 4 clicks)<br>
+                            shopify_us_7369500262573_42281718349997 (Emperor One Maple 24" - $1,250)<br>
+                            shopify_us_7207915520173_41688704647341 (Pink Melaleuca 36" - $1,850)
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: rgba(22, 38, 66, 0.6); border-radius: 8px;">
+                            <strong>Value Proposition:</strong><br>
+                            • Specialty varieties not available elsewhere<br>
+                            • "Japanese Maples Acclimated for California Heat"<br>
+                            • "Mature Specimens = Instant Landscape Impact"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success-box" style="margin-top: 30px;">
+                    <div class="success-title">Performance Max Optimization Keys</div>
+                    <div style="font-size: 1.1rem; margin-top: 15px;">
+                        • Feed-Only vs. Standard Asset Groups: Test both approaches<br>
+                        • Exclude Display/YouTube if still >60% of spend after 2 weeks<br>
+                        • New Customer Acquisition bidding once 50+ conversions/month<br>
+                        • Target ROAS: Start at 400%, increase to 500-600% after learning phase
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 2: Standard Shopping -->
+            <div class="phase">
+                <div class="phase-number">2</div>
+                <div class="phase-title">Standard Shopping Campaigns (Tier Structure)</div>
+                <div style="color: #e0e0e0; margin-bottom: 20px;">
+                    <strong>Budget:</strong> $60-80/day total | <strong>Goal:</strong> Capture high-intent product searches
+                </div>
+
+                <h4 style="color: #cc5b27; margin: 20px 0 15px 0;">Campaign A: Bestsellers (High Priority)</h4>
+                <div style="background: rgba(204, 91, 39, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <strong>Budget:</strong> $40-50/day | <strong>Priority Level:</strong> High<br><br>
+                    <strong>Product Segmentation by Custom Labels:</strong>
+                    <div style="margin-top: 15px; font-family: monospace; font-size: 0.95rem; background: rgba(22, 38, 66, 0.6); padding: 15px; border-radius: 8px;">
+                        <strong>Custom Label 0:</strong> "High Margin" (Products >$500)<br>
+                        <strong>Custom Label 1:</strong> "Low Competition" (CA Natives, Fruit/Citrus)<br>
+                        <strong>Custom Label 2:</strong> "Proven Sellers" (Products with historical clicks/conversions)
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <strong>Top Priority Product IDs:</strong><br>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin-top: 10px; line-height: 1.7; columns: 2; column-gap: 20px;">
+                            shopify_us_7300031316141_42066997543085<br>
+                            shopify_us_6244531568813_38070099542189<br>
+                            shopify_us_7254479012013_42065334108333<br>
+                            shopify_us_7300880203949_42069931065517<br>
+                            shopify_us_7193173098669_41637356175533<br>
+                            shopify_us_7294513316013_42042288668845<br>
+                            shopify_us_6244534091949_38070086860973<br>
+                            shopify_us_7092067565741_41604489969837
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.1); border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <strong style="color: #86efac;">Bidding Strategy:</strong><br>
+                        • Start: Manual CPC at $1.50-2.00 (high-value products justify higher CPC)<br>
+                        • After 30 conversions: Switch to Target ROAS 400-500%<br>
+                        • Maximize clicks for first 7 days to gather data quickly
+                    </div>
+                </div>
+
+                <h4 style="color: #cc5b27; margin: 20px 0 15px 0;">Campaign B: Catch-All (Medium Priority)</h4>
+                <div style="background: rgba(204, 91, 39, 0.1); padding: 20px; border-radius: 10px;">
+                    <strong>Budget:</strong> $20-30/day | <strong>Priority Level:</strong> Medium<br><br>
+                    <strong>Product Criteria:</strong> All remaining catalog products >$100<br><br>
+                    <div style="padding: 15px; background: rgba(22, 38, 66, 0.6); border-radius: 8px;">
+                        <strong>Purpose:</strong> Capture long-tail searches for less common products<br>
+                        <strong>Bidding:</strong> Target ROAS 500-600% (more conservative)<br>
+                        <strong>Monitoring:</strong> Pause products with >$50 spend and 0 conversions
+                    </div>
+                </div>
+
+                <div class="action-list" style="margin-top: 30px;">
+                    <div class="action-item">
+                        <strong>Shopping Campaign Optimizations:</strong><br>
+                        • Product title optimization: Add "California," "Mature," "Field-Ready" to titles<br>
+                        • Custom labels: Set up 3-5 custom labels for granular segmentation<br>
+                        • Negative keywords: 50+ terms (how to, diy, care, tips, small, young, starter)<br>
+                        • Merchant Promotions: "Free Delivery $500+" badge in Shopping results
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 3: Search Campaigns -->
+            <div class="phase">
+                <div class="phase-number">3</div>
+                <div class="phase-title">Structured Search Campaigns (High-Intent Queries)</div>
+                <div style="color: #e0e0e0; margin-bottom: 20px;">
+                    <strong>Budget:</strong> $40-60/day total | <strong>Goal:</strong> Capture contractor/professional searches
+                </div>
+
+                <h4 style="color: #cc5b27; margin: 20px 0 15px 0;">Campaign 1: California Natives (Low Competition)</h4>
+                <div style="background: rgba(34, 197, 94, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <strong>Budget:</strong> $15-20/day | <strong>Match Types:</strong> Exact + Phrase<br><br>
+                    <strong>Keyword Structure (Mapped to Product IDs):</strong>
+                    <div style="margin-top: 15px; background: rgba(22, 38, 66, 0.6); padding: 15px; border-radius: 8px;">
+                        <strong>Ad Group 1: Coast Live Oak</strong><br>
+                        <span style="font-family: monospace; color: #86efac;">shopify_us_6244531568813_38070099542189</span><br>
+                        Keywords: [coast live oak], [coast live oak tree], "coast live oak for sale"<br><br>
+
+                        <strong>Ad Group 2: California Sycamore</strong><br>
+                        <span style="font-family: monospace; color: #86efac;">shopify_us_6272743571629_38176374259885</span><br>
+                        Keywords: [california sycamore], [california sycamore tree], "sycamore tree california"<br><br>
+
+                        <strong>Ad Group 3: Toyon</strong><br>
+                        <span style="font-family: monospace; color: #86efac;">shopify_us_7300031316141_42066997543085</span><br>
+                        Keywords: [toyon], [toyon plant], [heteromeles arbutifolia], "california holly"<br><br>
+
+                        <strong>Ad Group 4: Western Redbud</strong><br>
+                        Keywords: [western redbud], [cercis occidentalis], "redbud tree california"
+                    </div>
+                    <div style="margin-top: 15px; padding: 15px; background: rgba(34, 197, 94, 0.15); border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <strong style="color: #86efac;">Ad Copy Example:</strong><br>
+                        Headline 1: "Coast Live Oak - Field-Ready Stock"<br>
+                        Headline 2: "36\" & 48\" Boxes Available | Same-Day Pickup"<br>
+                        Headline 3: "California's Largest Selection"<br>
+                        Description: "Mature Coast Live Oak trees acclimated for California. 36\" & 48\" boxes in stock. Free delivery $500+. Trusted by 2,000+ contractors."
+                    </div>
+                </div>
+
+                <h4 style="color: #cc5b27; margin: 20px 0 15px 0;">Campaign 2: Privacy Trees (High Competition)</h4>
+                <div style="background: rgba(220, 38, 38, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <strong>Budget:</strong> $10-15/day | <strong>Match Types:</strong> Exact only (tight control)<br><br>
+                    <strong>Keyword Structure (Size Differentiation):</strong>
+                    <div style="margin-top: 15px; background: rgba(22, 38, 66, 0.6); padding: 15px; border-radius: 8px;">
+                        <strong>Ad Group 1: Fern Pine</strong><br>
+                        <span style="font-family: monospace; color: #fca5a5;">shopify_us_6244409606317_38070132834477</span><br>
+                        Keywords: [fern pine 36 inch box], [large fern pine tree], [mature podocarpus]<br>
+                        <em>Avoid: generic "fern pine" (too competitive)</em><br><br>
+
+                        <strong>Ad Group 2: Italian Cypress</strong><br>
+                        Keywords: [italian cypress 36 inch], [tall italian cypress], [mature italian cypress]<br><br>
+
+                        <strong>Ad Group 3: Indian Laurel Columns</strong><br>
+                        <span style="font-family: monospace; color: #fca5a5;">shopify_us_7092067565741_41604489969837</span><br>
+                        Keywords: [indian laurel columns], [ficus nitida columns], "indian laurel 10 feet"
+                    </div>
+                    <div style="margin-top: 15px; padding: 15px; background: rgba(220, 38, 38, 0.15); border-radius: 8px; border-left: 4px solid #dc2626;">
+                        <strong style="color: #fca5a5;">Competitive Positioning:</strong><br>
+                        • Emphasize SIZE in every ad: "36\" Box," "10-12' Tall," "Instant Privacy"<br>
+                        • USP: "Mature Stock = No 3-Year Wait"<br>
+                        • Negative Keywords: [5 gallon], [15 gallon], [small], [young], [starter]
+                    </div>
+                </div>
+
+                <h4 style="color: #cc5b27; margin: 20px 0 15px 0;">Campaign 3: Fruit/Citrus Trees</h4>
+                <div style="background: rgba(204, 91, 39, 0.15); padding: 20px; border-radius: 10px;">
+                    <strong>Budget:</strong> $15-25/day | <strong>Match Types:</strong> Exact + Phrase<br><br>
+                    <strong>Keyword Structure (High-Intent Buyer Terms):</strong>
+                    <div style="margin-top: 15px; background: rgba(22, 38, 66, 0.6); padding: 15px; border-radius: 8px;">
+                        <strong>Ad Group 1: Meyer Lemon</strong><br>
+                        <span style="font-family: monospace; color: #ff8c52;">shopify_us_7254479012013_42065334108333</span><br>
+                        Keywords: [meyer lemon tree 36], [large meyer lemon], "meyer lemon tree for sale"<br><br>
+
+                        <strong>Ad Group 2: Hass Avocado</strong><br>
+                        Keywords: [hass avocado tree], [avocado tree for sale], "large avocado tree"<br><br>
+
+                        <strong>Ad Group 3: Citrus Variety Pack</strong><br>
+                        Keywords: [citrus trees california], [orange trees for sale], [lemon trees california]
+                    </div>
+                    <div style="margin-top: 15px; padding: 15px; background: rgba(204, 91, 39, 0.2); border-radius: 8px;">
+                        <strong>Seasonal Optimization:</strong><br>
+                        • Jan-Mar: Increase budget 30% (planting season)<br>
+                        • Oct-Nov: Current window - maximize now<br>
+                        • Summer: Reduce budget 20%, focus on evergreens
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 50px;">Negative Keyword Strategy (Account-Level)</h3>
+            <div class="issue-list">
+                <div class="issue-item">
+                    <strong>Informational Intent (Block Immediately):</strong><br>
+                    how to, diy, care, guide, tips, instructions, tutorial, video, youtube, grow from seed, propagate, prune, trim, fertilize, when to plant, best time
+                </div>
+                <div class="issue-item">
+                    <strong>Low-Value/Wrong Size:</strong><br>
+                    small, young, starter, baby, seedling, 1 gallon, 5 gallon, cheap, discount, free, wholesale (for retail searches)
+                </div>
+                <div class="issue-item">
+                    <strong>Competitor Brands:</strong><br>
+                    moon valley, moon nursery, plants express, fast growing trees, home depot, lowes, armstrong, plant clearance
+                </div>
+                <div class="issue-item">
+                    <strong>Wrong Intent:</strong><br>
+                    clipart, drawing, coloring page, tattoo, logo, picture, image, wallpaper, identification, identify
+                </div>
+            </div>
+
+            <div class="impact-box" style="margin-top: 40px;">
+                <div class="impact-number">3-Campaign Structure</div>
+                <div class="impact-label">Performance Max + Standard Shopping + Structured Search = Maximum Coverage</div>
+            </div>
+
+            <div class="success-box" style="margin-top: 30px;">
+                <div class="success-title">Total Daily Budget Allocation</div>
+                <div style="font-size: 1.2rem; margin-top: 15px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <strong>Performance Max:</strong> $80-100/day (40-45% of budget)<br>
+                    <strong>Standard Shopping:</strong> $60-80/day (30-35% of budget)<br>
+                    <strong>Structured Search:</strong> $40-60/day (20-25% of budget)<br>
+                    <strong>Brand Campaign:</strong> $20-30/day (defensive)<br><br>
+                    <strong style="color: #cc5b27;">Total: $200-270/day ($6,000-8,100/month)</strong><br><br>
+                    All focused on high-intent traffic, excluding Display/YouTube waste
+                </div>
+            </div>
+        </div>
         <div class="section">
             <h2>Strategic Implementation Roadmap</h2>
             <p style="color: #e0e0e0; font-size: 1.2rem; margin-bottom: 30px;">
@@ -74,7 +529,7 @@
             <!-- Week 2 -->
             <div class="phase">
                 <div class="phase-number">2</div>
-                <div class="phase-title">WEEK 2: Offer Optimization</div>
+                <div class="phase-title">WEEK 2: Offer Optimization (Hormozi Framework)</div>
                 <div style="color: #e0e0e0; margin-bottom: 20px; font-size: 1.1rem;">
                     <strong>Goal:</strong> Maximize value equation, increase AOV 25-40%
                 </div>
@@ -91,7 +546,7 @@
                     </div>
 
                     <div class="action-item">
-                        <strong>Rewrite Product Descriptions</strong>
+                        <strong>Rewrite Product Descriptions (Ed Leakes Framework)</strong>
                         <div style="margin-top: 10px; color: #b0c4de;">
                             • Lead with outcome, not features<br>
                             • Add "Perfect For:" section (use cases)<br>
@@ -861,7 +1316,7 @@
             <div class="success-box">
                 <div class="success-title">Core Opportunity Identified</div>
                 <div style="font-size: 1.3rem; color: #e0e0e0;">
-                    Strong traffic generation (4.19% CTR) but conversion optimization needed. Primary focus areas: mobile UX barriers, offer clarity, and conversion funnel optimization using proven frameworks from Ed Leakes (ad copy pillars) and Alex Hormozi (value equation).
+                    Strong traffic generation (4.19% CTR above 3.17% industry average) demonstrates market demand. Primary focus: mobile UX optimization, offer clarity, and conversion funnel improvements using proven direct response frameworks. Implementation required this week to capture remaining fall season demand.
                 </div>
             </div>
         </div>
@@ -886,8 +1341,8 @@
             </div>
 
             <div class="alert-box" style="background: rgba(204, 91, 39, 0.2); border-color: #cc5b27;">
-                <div class="alert-title" style="color: #ff8c52;">Performance Max Insight</div>
-                <div class="alert-text" style="color: #e0e0e0;">The algorithm is heavily favoring Display/YouTube placements (83%) over Search. This typically indicates either: (1) insufficient conversion data for optimization, or (2) better engagement metrics on visual placements. Need to feed algorithm better conversion signals and potentially adjust audience signals.</div>
+                <div class="alert-title" style="color: #ff8c52;">Performance Max Context</div>
+                <div class="alert-text" style="color: #e0e0e0;">The algorithm is heavily favoring Display/YouTube placements (83%) over Search. This indicates insufficient conversion data for optimization. Strategy: Feed algorithm better conversion signals through CRO improvements (Weeks 1-2), then PMax will automatically shift to high-intent placements. <strong style="color: #cc5b27;">Implementation deadline: Start Monday to complete before seasonal slowdown.</strong></div>
             </div>
 
             <h3 style="margin-top: 40px;">Why Performance Max Needs CRO + Offers First</h3>
@@ -1695,12 +2150,13 @@
                 </div>
 
                 <div class="impact-box" style="padding: 20px; margin-top: 30px;">
-                    <div style="font-size: 1.5rem;"><strong>Expected Impact After Hour 0-4:</strong></div>
+                    <div style="font-size: 1.5rem;"><strong>Week 1 Expected Results:</strong></div>
                     <div style="font-size: 1.2rem; margin-top: 10px;">
-                        • Budget waste reduced by $2,163/month (51%)<br>
-                        • Mobile users can actually see Add to Cart button<br>
+                        • Budget efficiency improved immediately<br>
+                        • Mobile users can see Add to Cart button (critical fix)<br>
                         • Page loads in 4-5s instead of 24s<br>
-                        • Conversions should appear within 48-72 hours
+                        • Conversions should appear within 48-72 hours<br>
+                        <strong style="color: white;">⏰ START MONDAY - Each day costs $140+ in wasted spend</strong>
                     </div>
                 </div>
             </div>
